@@ -10,7 +10,7 @@
 
 <body class="bg-blue-100">
 
-    <div class="md:container md:mx-auto px-16">
+    <div class="max-w-6xl mx-auto">
         <!-- navbar -->
         <div class="flex justify-between bg-blue-50 my-4 p-4 rounded-md">
             <!-- logo -->
@@ -21,9 +21,9 @@
             <div class="flex items-center">
                 <div class="flex items-center mr-6">
                     <img class="w-8 h-8 mr-2" src="./assets/checkbox.png" alt="complete task button">
-                    <p class="text-xl font-bold">23</p>
+                    <p id="totalCompletedtask" class="text-xl font-bold">0</p>
                 </div>
-                <img class="w-12 h-12" src="./assets/theme-btn.png" alt="color wheel">
+                <img onclick="changeBackgroundColor()" class="w-12 h-12" src="./assets/theme-btn.png" alt="color wheel">
             </div>
         </div>
 
@@ -39,11 +39,11 @@
                         <img class="h-6 w-6 mr-5" src="./assets/checkbox.png" alt="checkbox img">
                         <div>
                             Task Assigned <br>
-                            <span class="font-bold text-2xl">05</span>
+                            <span id="totalAssignedTask" class="font-bold text-2xl">06</span>
                         </div>
                     </div>
 
-                    <div
+                    <div onclick="gotoBlog()"
                         class="col-span-2 flex items-center bg-gradient-to-r from-blue-600 to-blue-300 text-white rounded-md px-4 py-2">
                         <img class="h-16 w-16 tracking-wide" src="./assets/board.png" alt="">
                         <p>Discover something <br>new today!</p>
@@ -51,7 +51,7 @@
 
                     <div class="flex items-center bg-blue-100 rounded-md px-4 py-2">
                         <img class="mr-4" src="./assets/calender.png" alt="">
-                        <p>Web, <br> <span class="font-bold">12, Jul 2025</span></p>
+                        <p><span id="weekDay"></span>, <br> <span id="date" class="font-bold"></span></p>
                     </div>
                 </div>
 
@@ -70,7 +70,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -86,7 +87,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -102,7 +104,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -118,7 +121,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -133,7 +137,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -149,7 +154,8 @@
 
                         <div class="flex items-center justify-between">
                             <p>Deadline <br><span class="font-bold">21 Mardch 2025</span></p>
-                            <button class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
+                            <button onclick="completeTheTask(this)"
+                                class="bg-blue-600 text-white rounded-md px-4 py-2">Completed</button>
                         </div>
                     </div>
 
@@ -159,15 +165,19 @@
 
             <div class="bg-blue-50 py-4 px-4 flex flex-col items-center rounded-md">
                 <p class="flex"><img class="mr-2" src="./assets/activity.png" alt="">Activity Log</p>
-                <button class="bg-blue-600 text-white rounded-lg px-4 py-2 my-4">Clear History</button>
+                <button id="clearHistoryBtn" class="bg-blue-600 text-white rounded-lg px-4 py-2 my-4">Clear
+                    History</button>
 
-                <div class="self-start bg-blue-100 rounded p-4 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Alias, assumenda.</div>
-                <div class="self-start bg-blue-100 rounded p-4 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. Alias, assumenda.</div>
+                <div id="taskHistory">
+                    <!-- data will add here from js -->
+                </div>
+
+                <!-- <div class="self-start bg-blue-100 rounded p-4 mb-4"></div> -->
+
             </div>
         </div>
     </div>
+    <script src="./main.js"></script>
 </body>
 
 </html>

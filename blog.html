@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-6">
+
+        <div class="flex justify-between bg-blue-50 my-4 p-4 rounded-md">
+            <!-- logo -->
+            <div class="flex items-center text-3xl">
+                <img class="mr-2" src="./assets/logo.png" alt="">Dev<span class="font-bold">Board</span>
+            </div>
+            <!-- back btn -->
+            <div class="text-right">
+                <button onclick="gotoHome()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Back to Desk
+                </button>
+            </div>
+        </div>
+
+        <h2 class="text-xl font-bold text-gray-700 mb-6 text-center">Blogs</h2>
+
+        <!-- Question 1 -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+                Question-1: What are the different ways to select an element in the DOM?
+            </h3>
+            <p class="text-gray-600 mt-2">
+                In JavaScript, you can select DOM elements using different methods:
+            <ul class="list-disc list-inside mt-2">
+                <li><code>document.getElementById('id')</code> - Selects an element by its ID.</li>
+                <li><code>document.getElementsByClassName('class')</code> - Selects elements by class name.</li>
+                <li><code>document.getElementsByTagName('tag')</code> - Selects elements by tag name.</li>
+                <li><code>document.querySelector('selector')</code> - Selects the first element matching the CSS
+                    selector.</li>
+                <li><code>document.querySelectorAll('selector')</code> - Selects all elements matching the CSS selector.
+                </li>
+            </ul>
+            </p>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+                Question-2: What is the difference between innerHTML, innerText, and textContent?
+            </h3>
+            <p class="text-gray-600 mt-2">
+                These three properties are used to manipulate and retrieve text content from an element:
+            <ul class="list-disc list-inside mt-2">
+                <li><code>innerHTML</code> - Returns or sets the HTML content inside an element</li>
+                <li><code>innerText</code> - Returns only the visible text inside an element.</li>
+                <li><code>textContent</code> - Returns all text inside an element, without parsing HTML.</li>
+            </ul>
+            </p>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+                Question-3: What is event delegation in the DOM?
+            </h3>
+            <p class="text-gray-600 mt-2">
+                Event delegation is a technique in JavaScript where a parent element handles events for its child
+                elements. Instead of adding event listeners to multiple elements, you add a single event listener to a
+                common ancestor and use event bubbling to capture events.
+            </p>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-gray-800">
+                Question-4: What is event bubbling in the DOM?
+            </h3>
+            <p class="text-gray-600 mt-2">
+                Event bubbling is a process in JavaScript where an event triggered on a child element "bubbles up" to
+                its parent elements. This means that if an event occurs on a nested element, its ancestors will also
+                receive the event unless stopped using <code>event.stopPropagation()</code>.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        function gotoHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

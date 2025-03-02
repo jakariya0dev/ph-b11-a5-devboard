@@ -29,7 +29,7 @@ function completeTheTask(btn) {
     btn.classList.remove("bg-green-600");
     btn.classList.add("bg-blue-300");
 
-    let taskTitle = btn.parentElement.previousElementSibling.previousElementSibling.innerText;
+    let taskTitle = btn.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.innerText;
     let completedTask = document.createElement("div");
     completedTask.innerText = "You have completed the task " + taskTitle + " at " + getCompletedTaskTime();
     completedTask.classList.add("self-start", "bg-blue-100", "rounded", "p-4", "mb-4");
@@ -42,14 +42,10 @@ function completeTheTask(btn) {
     
 }
 
-// clear history
 clearHistoryBtn.addEventListener("click", function() {
     taskHistoryElem.innerHTML = "";
 });
 
-// <!-- <div class="self-start bg-blue-100 rounded p-4 mb-4"></div> -->
-
-// Get the day name
 function getDayName(day) {
     switch(day) {
         case 0:

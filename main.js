@@ -12,10 +12,6 @@ const dateElem = document.getElementById("date");
 const taskHistoryElem = document.getElementById("taskHistory");
 const clearHistoryBtn = document.getElementById("clearHistoryBtn");
 
-
-
-
-
 //  send the value to the element
 weekDayElem.innerHTML = getDayName(today.getDay());
 dateElem.innerHTML = today.getDate() + " " + getMonthName(today.getMonth()) + " " + today.getFullYear();
@@ -23,7 +19,6 @@ totalAssignedTaskElem.innerHTML = totalAssignedTask;
 totalCompletedtaskElem.innerHTML = totalCompletedtask;
 
 
-// compelete task
 function completeTheTask(btn) {
     totalCompletedtask++;
     totalAssignedTask--;
@@ -138,6 +133,6 @@ function changeBackgroundColor() {
     body.classList.add(randomColor);
 }
 
-function gotoBlog() {
+function gotoBlogPage() {
      window.location.href = 'blog.html'; 
 }

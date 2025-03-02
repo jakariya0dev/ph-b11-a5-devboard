@@ -119,8 +119,9 @@ function getMonthName(month) {
 }
 
 function getCompletedTaskTime() {
-    let ampm = today.getHours() >= 12 ? " PM" : " AM";
-    return today.getHours() % 12 + ":" + today.getMinutes() + ":" + today.getSeconds() + ampm;
+    let now = new Date();
+    let ampm = now.getHours() >= 12 ? " PM" : " AM";
+    return now.getHours() % 12 + ":" + now.getMinutes() + ":" + now.getSeconds() + ampm;
 }
 
 function changeBackgroundColor() {
